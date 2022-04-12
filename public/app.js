@@ -11,6 +11,14 @@ const showPriceRangeElem = document.querySelector('.showPriceRange');
 const garmentsTemplateText = document.querySelector('.garmentListTemplate');
 const garmentsTemplate = Handlebars.compile(garmentsTemplateText.innerHTML);
 
+// const domFields = {
+//     "description": "Rainbow unicorn sweater",
+//     "price": 799.00,
+//     "img": "placeholder.png",
+//     "gender": "Unisex",
+//     "season": "All season"
+// }
+
 seasonOptions.addEventListener('click', function(evt) {
     seasonFilter = evt.target.value;
     filterData();
@@ -44,3 +52,28 @@ priceRangeElem.addEventListener('change', function(evt) {
 });
 
 filterData();
+
+// function addGarments() {
+//     axios.post('/api/garments', domFields
+//         .then((result) => {
+//             // show snackbar - with success message
+//             console.log(result.data);
+//         })
+//         .catch(err => {
+//             console.log(err);
+//         })
+//     );
+// }
+
+
+
+// function myFunction() {
+//     // Get the snackbar DIV
+//     var x = document.getElementById("snackbar");
+
+//     // Add the "show" class to DIV
+//     x.className = "show";
+
+//     // After 3 seconds, remove the show class from DIV
+//     setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
+// }
